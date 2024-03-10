@@ -21,25 +21,58 @@ License: MIT License
 
 Installation:
 
+Clone project from GIT
 
+
+```
+git clone https://github.com/Melis-Baike/weather-sdk.git
+```
+
+Go to your project folder
+
+
+```
+cd weather-sdk
+```
+
+Open the console/terminal and enter next command
+
+
+```
+mvn clean install
+```
 
 Configuration:
 
+In your project add next dependency to pom.xml
+
 ```
-public class Test {
-  public static void test(String[] args) {
-    System.out.println("Test");
-  }
-}
+<dependency>
+  <groupId>weather</groupId>
+  <artifactId>sdk</artifactId>
+  <version>1.0.0</version>
+</dependency>
 ```
 
 Usage Example:
 
 ```
-public class Test {
-  public static void test(String[] args) {
-    System.out.println("Test");
-  }
+import weather.sdk.enumeration.Mode;
+import weather.sdk.exception.WeatherException;
+import weather.sdk.model.dto.WeatherDataDto;
+import weather.sdk.service.WeatherSDK;
+import weather.sdk.service.WeatherService;
+
+public class ApiApplication {
+	public static void main(String[] args) {
+		WeatherSDK weatherSDK = new WeatherService("api-key", Mode.ON_DEMAND); // enter your api-key and set up your desired mode 
+		try {
+			WeatherDataDto result = weatherSDK.getWeather("city name"); // enter your city name
+			System.out.println(result.getWind().getSpeed()); // wind speed
+		} catch (WeatherException e){
+			e.printStackTrace(); // catch exception
+		}
+	}
 }
 ```
 
