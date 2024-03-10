@@ -19,6 +19,12 @@ Maven for building and managing dependencies
 
 License: MIT License
 
+You should already have the git and mvn commands available.
+If you don't have git and mvn installed yet, install it
+[git](https://git-scm.com/downloads)
+[mvn](https://maven.apache.org/download.cgi)
+
+
 # Installation:
 
 Clone project from GIT
