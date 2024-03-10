@@ -1,4 +1,4 @@
-# weather-sdk
+# Weather SDK
 Weather SDK is a Java library for easy integration with weather services. Allows you to obtain current weather data for specified cities, based on data from open sources
 
 Key Features:
@@ -19,7 +19,7 @@ Maven for building and managing dependencies
 
 License: MIT License
 
-Installation:
+# Installation:
 
 Clone project from GIT
 
@@ -42,7 +42,7 @@ Open the console/terminal and enter next command
 mvn clean install
 ```
 
-Configuration:
+# Configuration:
 
 In your project add next dependency to pom.xml
 
@@ -54,7 +54,7 @@ In your project add next dependency to pom.xml
 </dependency>
 ```
 
-Usage Example:
+# Usage Example:
 
 ```
 import weather.sdk.enumeration.Mode;
